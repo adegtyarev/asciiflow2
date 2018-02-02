@@ -1,15 +1,12 @@
-Follow the instructions to get asciiflow running locally.
+# ASCIIFlow Inifinity
 
-Compile the javascript:
-~/asciiflow2$ ./compile.sh
+This is a fork of the amazing ASCII-based drawing tool [ASCIIFLlow Infinity](https://github.com/lewish/asciiflow2).
 
-If you get a permissions error:
-~/asciiflow2$ chmod a+x closure-compiler.jar
+My only modification is I've added a Makefile and Dockerfile to make running the thing locally easier.
+What you get is a containerized NGINX serving the drawing tool.
+You can use it from the browser.
 
-Run a simple web server:
-~/asciiflow2$python -m SimpleHTTPServer
-
-Goto: http://localhost:8000/index.html
-
-When developing, use the Google JS linter, gjslint.
-
+Run:
+- `make build` to build the container locally
+- `make start` to run it - port 8080 is default
+- `make stop` to stop the server
