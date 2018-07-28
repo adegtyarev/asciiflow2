@@ -1,7 +1,7 @@
 build:
 	docker build -t asciiflow .
 
-start:
+start: build
 	docker run -p 8080:80 -d --name asciiflow asciiflow
 
 stop:
